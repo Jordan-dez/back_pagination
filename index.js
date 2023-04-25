@@ -22,9 +22,6 @@ const connection = mysql.createConnection({
   app.listen(process.env.PORT || 3000,()=>{
     console.log("listen on port 3000")
   })
-  app.get('/',(req,res)=>{
-    res.send("hello api");
-  })
 
   app.get('/film',(req,res)=>{
     let page = req.query.page || 1;
