@@ -1,4 +1,4 @@
-import * as mysql from 'mysql';
+import  * as mysql from 'mysql';
 import  express  from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
@@ -28,7 +28,7 @@ const connection = mysql.createConnection({
     let postPerPage=req.query.postPerPage||10;
     
     const {sortBy,OrderBy}=req.query
-    console.log("req.query",OrderBy)
+
     const Filmquery = `
       SELECT film.film_id,film.title AS Nom_du_film, film.rental_rate AS Prix_de_location, film.rating AS Classement,
       category.name AS Nom_du_genre,
