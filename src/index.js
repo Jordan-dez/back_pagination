@@ -24,7 +24,7 @@ const connection = mysql.createConnection({
   })
 
   app.get('/',(req,res)=>{
-    return res.send("hello");
+    res.send("hello");
   })
   app.get('/film',(req,res)=>{
     let page = req.query.page || 1;
