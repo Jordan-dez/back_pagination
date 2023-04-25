@@ -23,6 +23,9 @@ const connection = mysql.createConnection({
     console.log("listen on port 3000")
   })
 
+  app.get('/',(req,res)=>{
+    return res.send("hello");
+  })
   app.get('/film',(req,res)=>{
     let page = req.query.page || 1;
     let postPerPage=req.query.postPerPage||10;
